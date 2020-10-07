@@ -1,13 +1,13 @@
-//
-//  TestBridge.m
-//  TestBridge
-//
-//  Created by David Angulo on 10/7/20.
-//  Copyright © 2020 David Angulo. All rights reserved.
-//
-
 #import "TestBridge.h"
 
 @implementation TestBridge
+
+RCT_EXPORT_MODULE();
+
+RCT_EXPORT_METHOD(foo:(RCTResponseSenderBlock)callback)
+{
+  NSString *testString = @"test";
+  callback(@[testString]);
+}
 
 @end

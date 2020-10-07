@@ -1,13 +1,5 @@
-//
-//  TestBridge.h
-//  TestBridge
-//
-//  Created by David Angulo on 10/7/20.
-//  Copyright © 2020 David Angulo. All rights reserved.
-//
+#import <React/RCTBridgeModule.h>
 
-#import <Foundation/Foundation.h>
-
-@interface TestBridge : NSObject
+@interface TestBridge : NSObject <RCTBridgeModule>
 
 @end
