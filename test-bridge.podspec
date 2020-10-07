@@ -7,6 +7,7 @@ Pod::Spec.new do |spec|
   spec.license = package['license']
   spec.homepage = package['homepage']
   spec.author = { package['author']['name'] => package['author']['email'] }
-  spec.source = { git: package['repository']['url'] }
-  spec.source_files = '*.{h,m}'
+  spec.source = { git: package['repository']['url'], tag: "v#{spec.version}" }
+  spec.source_files  = 'ios/**/*.{h,m}'
+  spec.dependency 'React-Core'
 end
